@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Bash(curl -fsSL https://cdn.jsdelivr.net/gh/ruvnet/ruflo@main/scripts/install.sh)",
+      "Bash(bash)",
+      "Bash(npm install:*)",
+      "Bash(uipro init:*)",
+      "Bash(uipro --help)",
+      "Bash(mkdir -p ~/.claude/skills/ui-ux-pro-max)",
+      "Bash(cp -r .claude/skills/ui-ux-pro-max/. ~/.claude/skills/ui-ux-pro-max/)"
+    ]
+  }
+}
