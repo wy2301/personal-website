@@ -23,7 +23,7 @@ const projects = [
       { label: "Full Case Study →", url: "/projects/rendezvous" },
     ],
     highlight: "PM Case Study",
-    video: "/rendezvous-demo.mp4",
+    video: "https://www.youtube.com/embed/RDbmyql2ByA",
     caseStudy: [
       { label: "The tension", text: "Team wanted to build inspiration-first (pretty photos, then filter). I pushed for constraint-first (budget + date first, then show vendors). It felt less \"fun\" — that was the argument against it." },
       { label: "The call I made", text: "I pulled competitor data showing 88% of vendors hide pricing. Couples don't have an inspiration problem — they have a shortlist problem. Constraint-first was the only model that solved it." },
@@ -136,16 +136,18 @@ export default function Projects() {
               {/* Demo video */}
               {"video" in p && p.video && (
                 <div className="pl-12 mb-4">
-                  <video
-                    src={p.video as string}
-                    controls
-                    muted
-                    playsInline
+                  <iframe
+                   width="100%"
+                   src={p.video as string}
+                    title="Project Demo"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                     className="w-full max-w-2xl rounded-xl border border-white/10"
-                    style={{ maxHeight: 340 }}
-                  />
+                   style={{ maxHeight: 340, aspectRatio: "16/9" }}
+                 />
                 </div>
-              )}
+                )}
 
               {/* Tags + links */}
               <div className="pl-12 flex flex-wrap items-center gap-3">

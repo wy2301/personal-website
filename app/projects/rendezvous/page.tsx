@@ -50,8 +50,15 @@ export default function RendezvousPage() {
         {/* Demo video */}
         <div>
           <h2 className="text-xs font-semibold tracking-widest text-sky-400 uppercase mb-3">Demo</h2>
-          <div className="rounded-2xl overflow-hidden border border-white/10">
-            <video src="/rendezvous-demo.mp4" controls muted playsInline className="w-full" />
+          <div className="rounded-2xl overflow-hidden border border-white/10 aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/RDbmyql2ByA"
+              title="Rendezvous Demo"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
           </div>
         </div>
 
